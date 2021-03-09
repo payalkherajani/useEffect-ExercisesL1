@@ -11,7 +11,7 @@ const Counter = () => {
     }
     return (
         <div>
-            <h1>Counter {count}</h1>
+            <h6>Counter {count}</h6>
             <button onClick={incrementCount}>run useeffect after every click</button>
         </div>
     )
