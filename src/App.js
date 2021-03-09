@@ -1,5 +1,6 @@
 import './App.css';
 import Counter from './components/practice/Counter';
+import GetAxios from './components/practice/GetAxios';
 import LocalStorage from './components/practice/LocalStorage';
 import Wishlist from './components/practice/Wishlist';
 
@@ -13,6 +14,8 @@ function App() {
       <LocalStorage />
       <h3>My WishList</h3>
       <Wishlist />
+      <h3>FROM SERVER!</h3>
+      <GetAxios />
     </div>
   );
 }
