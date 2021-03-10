@@ -1,6 +1,7 @@
 import './App.css';
 import Counter from './components/practice/Counter';
 import GetAxios from './components/practice/GetAxios';
+import LoadDataAxios from './components/practice/LoadDataAxios';
 import LocalStorage from './components/practice/LocalStorage';
 import Wishlist from './components/practice/Wishlist';
 
@@ -16,6 +17,7 @@ function App() {
       <Wishlist />
       <h3>FROM SERVER!</h3>
       <GetAxios />
+      <LoadDataAxios />
     </div>
   );
 }
