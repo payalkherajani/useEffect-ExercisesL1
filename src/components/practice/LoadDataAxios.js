@@ -25,18 +25,18 @@ const LoadDataAxios = () => {
         <div>
             <h1>{isLoading === true ? ("DATA LOADING...") : ("DATA")}</h1>
             <span>code commented now!! Lots of data</span>
-            {/* <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+            <div style={{ display: 'flex', flexWrap: 'wrap' }}>
                 {
                     data && data.map((d, index) =>
                         <div class="card" key={index}>
                             <h5>{d.name}</h5>
                             <img src={d.image} className="image" />
-                            <p class="card-heading-grow">Price: {d.price}</p>
+                            <p className="card-heading-grow">Price: {d.price}</p>
                             <button>Buy Now</button>
                         </div>
                     )
                 }
-            </div> */}
+            </div>
         </div>
     )
 }

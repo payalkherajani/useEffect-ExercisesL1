@@ -3,6 +3,7 @@ import Counter from './components/practice/Counter';
 import GetAxios from './components/practice/GetAxios';
 import LoadDataAxios from './components/practice/LoadDataAxios';
 import LocalStorage from './components/practice/LocalStorage';
+import PostData from './components/practice/PostData';
 import Wishlist from './components/practice/Wishlist';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
       <h3>FROM SERVER!</h3>
       <GetAxios />
       <LoadDataAxios />
+      <PostData />
     </div>
   );
 }
