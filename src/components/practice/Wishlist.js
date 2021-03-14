@@ -13,7 +13,7 @@ const Wishlist = () => {
 
     const savetoWishList = () => {
         const wishes = { id: Date.now(), wishText: wishText }
-        setWishList((wishlist) => [...wishList, wishes])
+        setWishList((wishList) => [...wishList, wishes])
         setWishText((wishText) => wishText = " ")
     }
 
