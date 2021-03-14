@@ -1,4 +1,5 @@
 import './App.css';
+import AddressManagement from './components/homework/AddressManagement';
 import Counter from './components/practice/Counter';
 import GetAxios from './components/practice/GetAxios';
 import LoadDataAxios from './components/practice/LoadDataAxios';
@@ -20,6 +21,7 @@ function App() {
       <GetAxios />
       <LoadDataAxios />
       <PostData />
+      <AddressManagement />
     </div>
   );
 }

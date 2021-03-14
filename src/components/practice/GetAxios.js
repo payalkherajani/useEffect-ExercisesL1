@@ -3,7 +3,7 @@ import useAxios from '../homework/AxiosHook';
 
 const GetAxios = () => {
     const url = '/api/users'
-    const { loading, data, error } = useAxios(url);
+    const { loading, data, error } = useAxios(url, "get");
 
     return (
         <div>

@@ -1,9 +1,7 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
-import MockServer from '../api/User';
 
-MockServer();
-const useAxios = (url) => {
+const usePostAxios = (url, formdata) => {
 
     const [loading, setLoading] = useState(false);
     const [data, setData] = useState([]);
@@ -12,11 +10,15 @@ const useAxios = (url) => {
     const fetchData = async () => {
         setLoading(true);
         try {
-            const response = await axios.get(url);
-            console.log({ response })
+            const response = await axios.post(url, {
+                address: {
+                    formdata
+                }
+            });
             setData(response);
         } catch (err) {
             setError(err);
+            console.error(err, "1");
         }
         finally {
             setLoading(false);
@@ -25,9 +27,9 @@ const useAxios = (url) => {
 
     useEffect(() => {
         fetchData();
-    }, [])
+    }, [data])
 
     return { loading, error, data }
 }
 
-export default useAxios;
+export default usePostAxios;
