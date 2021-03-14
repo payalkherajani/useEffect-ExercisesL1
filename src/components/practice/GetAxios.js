@@ -1,34 +1,18 @@
-import React, { useState } from 'react';
-import MockServer from '../api/User';
-import axios from 'axios';
-
-MockServer();  //calling server
+import React from 'react';
+import useAxios from '../homework/AxiosHook';
 
 const GetAxios = () => {
-    const [isLoading, setIsLoading] = useState(false);
-    const [data, setData] = useState([]);
+    const url = '/api/users'
+    const { loading, data, error } = useAxios(url);
 
-    const getDatafromserver = async () => {
-        setIsLoading((isLoading) => isLoading = true);
-        try {
-            const { data: { users } } = await axios.get('/api/users');
-            // setData(users)
-            setData((data) => data = users)
-        } catch (err) {
-            console.error(err);
-        }
-        setIsLoading((isLoading) => isLoading = false)
-    }
-    console.log(data, "data");
     return (
         <div>
-            <h1>{isLoading === true ? ("DATA LOADING") : ("DATA")}</h1>
-            <button onClick={getDatafromserver}>Click to load from server</button>
-            <ul>
+            <h1>{loading === true ? ("DATA LOADING") : ("DATA")}</h1>
+            {/* <ul>
                 {
-                    data.map((d) => <li key={d.id}>{d.name}</li>)     //Showing error ask in vc
+                    data.data.users.map((d) => <li key={d.id}>{d.name}</li>)     //Showing error ask in vc
                 }
-            </ul>
+            </ul> */}
 
         </div>
     )
